@@ -1,134 +1,397 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Responsive Layout</title>
-<style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Layout</title>
+  <style>
+    /********** Base styles **********/
+    * {
+      box-sizing: border-box;
+    }
 
-/********** Base styles **********/
-* {
-  box-sizing: border-box;
-}
-h1 {
-  margin-bottom: 15px;
-}
+    h1 {
+      margin-bottom: 15px;
+    }
 
-p {
-  border: 1px solid black;
-  background-color: #A52A2A;
-  width: 90%;
-  height: 150px;
-  margin-right: auto;
-  margin-left: auto;
-  font-family: Helvetica;
-  color: white;
-}
+    p {
+      border: 1px solid black;
+      background-color: #A52A2A;
+      /* width: 90%;
+  height: 150px; */
+      margin-right: auto;
+      margin-left: auto;
+      font-family: Helvetica;
+      color: white;
+    }
 
-/* Simple Responsive Framework. */
-.row {
-  width: 100%;
-}
+    /* Simple Responsive Framework. */
+    .row {
+      width: 100%;
+    }
 
-/********** Large devices only **********/
-@media (min-width: 992px) {
-  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
-    float: left;
-    border: 1px solid green;
-  }
-  .col-lg-1 {
-    width: 8.33%;
-  }
-  .col-lg-2 {
-    width: 16.66%;
-  }
-  .col-lg-3 {
-    width: 25%;
-  }
-  .col-lg-4 {
-    width: 33.33%;
-  }
-  .col-lg-5 {
-    width: 41.66%;
-  }
-  .col-lg-6 {
-    width: 50%;
-  }
-  .col-lg-7 {
-    width: 58.33%;
-  }
-  .col-lg-8 {
-    width: 66.66%;
-  }
-  .col-lg-9 {
-    width: 74.99%;
-  }
-  .col-lg-10 {
-    width: 83.33%;
-  }
-  .col-lg-11 {
-    width: 91.66%;
-  }
-  .col-lg-12 {
-    width: 100%;
-  }
-}
+    /********** Large devices only **********/
+    @media (min-width: 992px) {
 
-/********** Medium devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-    float: left;
-    border: 1px solid green;
-  }
-  .col-md-1 {
-    width: 8.33%;
-  }
-  .col-md-2 {
-    width: 16.66%;
-  }
-  .col-md-3 {
-    width: 25%;
-  }
-  .col-md-4 {
-    width: 33.33%;
-  }
-  .col-md-5 {
-    width: 41.66%;
-  }
-  .col-md-6 {
-    width: 50%;
-  }
-  .col-md-7 {
-    width: 58.33%;
-  }
-  .col-md-8 {
-    width: 66.66%;
-  }
-  .col-md-9 {
-    width: 74.99%;
-  }
-  .col-md-10 {
-    width: 83.33%;
-  }
-  .col-md-11 {
-    width: 91.66%;
-  }
-  .col-md-12 {
-    width: 100%;
-  }
-}
+      .col-lg-1,
+      .col-lg-2,
+      .col-lg-3,
+      .col-lg-4,
+      .col-lg-5,
+      .col-lg-6,
+      .col-lg-7,
+      .col-lg-8,
+      .col-lg-9,
+      .col-lg-10,
+      .col-lg-11,
+      .col-lg-12 {
+        float: left;
+        border: 1px solid green;
+      }
 
-</style>
+      .col-lg-1 {
+        width: 8.33%;
+      }
+
+      .col-lg-2 {
+        width: 16.66%;
+      }
+
+      .col-lg-3 {
+        width: 25%;
+      }
+
+      .col-lg-4 {
+        width: 33.33%;
+      }
+
+      .col-lg-5 {
+        width: 41.66%;
+      }
+
+      .col-lg-6 {
+        width: 50%;
+      }
+
+      .col-lg-7 {
+        width: 58.33%;
+      }
+
+      .col-lg-8 {
+        width: 66.66%;
+      }
+
+      .col-lg-9 {
+        width: 74.99%;
+      }
+
+      .col-lg-10 {
+        width: 83.33%;
+      }
+
+      .col-lg-11 {
+        width: 91.66%;
+      }
+
+      .col-lg-12 {
+        width: 100%;
+      }
+    }
+
+    /********** Medium devices only **********/
+    @media (min-width: 768px) and (max-width: 991px) {
+
+      .col-md-1,
+      .col-md-2,
+      .col-md-3,
+      .col-md-4,
+      .col-md-5,
+      .col-md-6,
+      .col-md-7,
+      .col-md-8,
+      .col-md-9,
+      .col-md-10,
+      .col-md-11,
+      .col-md-12 {
+        float: left;
+        border: 1px solid green;
+      }
+
+      .col-md-1 {
+        width: 8.33%;
+      }
+
+      .col-md-2 {
+        width: 16.66%;
+      }
+
+      .col-md-3 {
+        width: 25%;
+      }
+
+      .col-md-4 {
+        width: 33.33%;
+      }
+
+      .col-md-5 {
+        width: 41.66%;
+      }
+
+      .col-md-6 {
+        width: 50%;
+      }
+
+      .col-md-7 {
+        width: 58.33%;
+      }
+
+      .col-md-8 {
+        width: 66.66%;
+      }
+
+      .col-md-9 {
+        width: 74.99%;
+      }
+
+      .col-md-10 {
+        width: 83.33%;
+      }
+
+      .col-md-11 {
+        width: 91.66%;
+      }
+
+      .col-md-12 {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
-<body>
-<h1>Responsive Layout</h1>
 
-<div class="row">
-  <div class="col-lg-3 col-md-6"><p>Item 1</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 2 Wow this is cool</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 3</p></div>
-</div>
+<body>
+  <h1>Responsive Layout</h1>
+
+  <div class="row">
+    <div class="col-lg-3 col-md-6">
+      <p>Lorem Ipsum Plugins
+        Generate Lorem Ipsum in the text editor, word processor or CMS of your choice. Check out our excellent list of
+        plugins below. Love NPM? We do,
+        especially since they’ve got
+        a few Lorem Ipsum
+        packages. You know the
+        drill, “npm install” any one
+        of these, require the
+        package in your JS file and
+        you’re good to go with
+        some classic Lorem Ipsum
+        text. Also available as dropin JS modules.
+        NPM Lorem Ipsum Package
+        NPM Post HTML Lorem
+        Package
+        • JAVA
+        Java has been around so
+        long it’s no surprise there
+        are a number of great
+        Lorem Ipsum generators
+        already in existence. We’ve
+        selected two below, but feel
+        free to browse Google for
+        more. Don’t let the first
+        generator’s page fool you,
+        it’s quite powerful.
+        Source Forge Lorem Ipsum
+        Generator
+        Java Lorem Ipsum Generator
+      <p>• PYTHONCONFIDENTIAL & RESTRICTED
+        Python is great for mining
+        data and text, so why not
+        for generating it? Below are
+        a couple of our favorite
+        Lorem Ipsum libraries for
+        generating text in Python.
+        And the best thing?
+        Collective Lorem Ipsum
+        also supports placeholder
+        images!
+        Python Lorem Ipsum
+        Generator
+        Python Collective Lorem
+        Ipsum</p>
+      <p>• JAVASCRIPT
+        Where would the web be
+        without JavaScript? Or
+        Lorem Ipsum text for that
+        matter. You can easily (and
+        conveniently) combine both
+        of these web staples using
+        the libraries listed below,
+        just drop the files into your
+        website or webapp and
+        placehold all the things.
+        JavaScript Lorem Ipsum
+        Library
+        JavaScript Lorem Generator
+        • RUBY
+        What a gem. Literally.
+        These Lorem Ipsum Ruby
+        gems are great if you need
+        to include some dummy
+        text in your projects. As a
+        bonus, the first gem listedCONFIDENTIAL & RESTRICTED
+        below, Forgery, also does
+        email, passwords and
+        money (psuedo-Latin not
+        guaranteed).
+        Ruby Forgery Gem
+        Ruby </p>
+      </p>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <p>Item 2
+        Ipsum plugins to your
+        workflow and enjoy the
+        benefits of programmatic
+        dummy text wherever you
+        require.
+        Sublime Lorem Text
+        Sublime Lorem Ipsum
+        Generator
+        • ATOM TEXT EDITOR
+        If you’re using the Atom
+        text editor, try these helpful
+        packages to add Lorem
+        Ipsum text to your
+        programming experience.
+        You can install them both
+        using the command line,
+        and the first supports hot
+        keys for adding placeholder
+        text inline with your code.
+        Atom Lorem Ipsum Package
+        Atom Lipsum Generator
+        • BRACKETS TEXT EDITOR
+        For those shipping code via
+        the Brackets text editor,
+        we’ve got a treat for you.
+        Check out the link below
+        for a full-featured Lorem
+        Ipsum generator designed
+        just for Brackets. Use File >
+        Extension Manager to
+        install and then type
+        “lorem” whenever you need
+        some filler text.CONFIDENTIAL & RESTRICTED
+        Brackets Lorem Ipsum
+        Package
+      <p>• NPM (NODE PACKAGE
+        MANAGER)
+        Love NPM? We do,
+        especially since they’ve got
+        a few Lorem Ipsum
+        packages. You know the
+        drill, “npm install” any one
+        of these, require the
+        package in your JS file and
+        you’re good to go with
+        some classic Lorem Ipsum
+        text. Also available as dropin JS modules.
+        NPM Lorem Ipsum Package
+        NPM Post HTML Lorem
+        Package</p>
+      <p>• JAVA
+        Java has been around so
+        long it’s no surprise there
+        are a number of great
+        Lorem Ipsum generators
+        already in existence. We’ve
+        selected two below, but feel
+        free to browse Google for
+        more. Don’t let the first
+        generator’s page fool you,
+        it’s quite powerful</p>
+      </p>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <p>Item 3</p>
+      <p>Lorem Ipsum Plugins
+        Generate Lorem Ipsum
+        in the text editor, word
+        processor or CMS of
+        your choice. Check out
+        our excellent list of
+        plugins below.
+        • WORDPRESS CMS
+        If you’re developing themes
+        or just need to mockup your
+        new page with some Lorem
+        Ipsum dummy text, check
+        out these easy to use
+        WordPress plugins. Drop
+        the files in your /plugins
+        directory and active them
+        via the Admin menu.
+        WordPress Example Content
+        WordPress Lorem Ipsum
+        Generator
+        • SUBLIME TEXT EDITOR
+        Designing and developing
+        websites is so much easier
+        when you’ve got some
+        placeholder text handy. Add
+        these Sublime Text Lorem
+      <p>CONFIDENTIAL & RESTRICTED
+        Ipsum plugins to your
+        workflow and enjoy the
+        benefits of programmatic
+        dummy text wherever you
+        require.
+        Sublime Lorem Text
+        Sublime Lorem Ipsum
+        Generator
+        • ATOM TEXT EDITOR
+        If you’re using the Atom
+        text editor, try these helpful
+        packages to add Lorem
+        Ipsum text to your
+        programming experience.
+        You can install them both
+        using the command line,
+        and the first supports hot
+        keys for adding placeholder
+        text inline with your code.
+        Atom Lorem Ipsum Package
+        Atom Lipsum Generator</p>
+      <p>• BRACKETS TEXT EDITOR
+        For those shipping code via
+        the Brackets text editor,
+        we’ve got a treat for you.
+        Check out the link below
+        for a full-featured Lorem
+        Ipsum generator designed
+        just for Brackets. Use File >
+        Extension Manager to
+        install and then type
+        “lorem” whenever you need
+        some filler text.CONFIDENTIAL & RESTRICTED
+        Brackets Lorem Ipsum
+        Package</p>
+      <p>• NPM (NODE PACKAGE
+        MANAGER)
+        Love NPM? We do,
+        especially since they’ve got
+        a few Lorem Ipsum
+        packages. You know the
+        drill, “npm install” any one
+        of these, require the
+        package in your JS file and
+        you’re good to go with
+        some classic Lorem Ipsum
+        text. Also available as dropin JS modules</p>
+    </div>
+  </div>
 
 </body>
+
 </html>
